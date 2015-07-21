@@ -1,0 +1,27 @@
+{
+  "name": "gulp-eb-deploy",
+  "version": "1.0.0",
+  "description": "Gulp ElasticBeanstalk plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjongsma/gulp-eb-deploy.git"
+  },
+  "author": "Jeremy Jongsma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjongsma/gulp-eb-deploy/issues"
+  },
+  "homepage": "https://github.com/jjongsma/gulp-eb-deploy#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1.39",
+    "git-rev": "^0.2.1",
+    "gulp-util": "^3.0.6",
+    "lodash": "^3.10.0",
+    "q": "^1.4.1",
+    "through2": "^2.0.0"
+  }
+}
