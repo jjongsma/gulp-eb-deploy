@@ -42,7 +42,7 @@ module.exports = function(config) {
             '-' + rev +
             '-' + Math.floor((Math.random() * 899999) + 100000);
 
-          var label = config.application + '-' + version;
+          var label = config.application + '-' + config.environment + '-' + version;
 
           var account = data.User.Arn.split(/:/)[4];
           var bucket = 'elasticbeanstalk-' + config.region + '-' + account;
