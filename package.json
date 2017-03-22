@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/jjongsma/gulp-eb-deploy#readme",
   "dependencies": {
-    "aws-sdk": "^2.1.39",
+    "aws-sdk": "^2.6.6",
     "git-rev": "^0.2.1",
     "gulp-util": "^3.0.6",
     "lodash": "^3.10.0",

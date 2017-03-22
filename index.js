@@ -21,9 +21,9 @@ module.exports = function(config) {
       gutil.log('Using credentials from profile \'' + config.profile + '\'');
     }
 
-    var iam = new AWS.IAM();
+    var sts = new AWS.STS();
 
-    iam.getUser({}, function(err, data) {
+    sts.getCallerIdentity({}, function(err, data) {
 
       if (err) {
         callback(new gutil.PluginError('gulp-eb-deploy', err));
@@ -44,7 +44,7 @@ module.exports = function(config) {
 
           var label = config.application + '-' + config.environment + '-' + version;
 
-          var account = data.User.Arn.split(/:/)[4];
+          var account = data.Account;
           var bucket = 'elasticbeanstalk-' + config.region + '-' + account;
 
           var s3obj = new AWS.S3({ params: { Bucket: bucket, Key: label + '.zip' } });
